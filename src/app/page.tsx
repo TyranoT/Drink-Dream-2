@@ -1,4 +1,3 @@
-import { Image } from "@heroui/react";
 import BannerMain from "./components/banner/banner_main";
 import Header from "./components/header/header";
 

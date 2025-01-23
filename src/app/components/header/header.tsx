@@ -24,11 +24,11 @@ export default function Header() {
     });
 
     return (
-        <header className="flex flex-row w-full p-10 bg-white shadow-md">
-            <div className="flex items-center justify-between w-full">
-                <div className="flex items-center gap-4">
-                    <Image alt="Logo Drink Dream" src="images/drink_logo.png" className="w-32 h-32 rounded-full object-cover" />
-                    <h1 className="text-3xl font-bold text-black">
+        <header className="flex flex-row w-full xl:p-10 p-5 bg-white shadow-md">
+            <div className="flex xl:flex-row flex-col items-center justify-between w-full">
+                <div className="flex xl:flex-row flex-col items-center xl:gap-4">
+                    <Image alt="Logo Drink Dream" src="images/drink_logo.png" className="xl:size-32 size-56 rounded-full object-cover" />
+                    <h1 className="text-3xl max-xl:hidden font-bold text-black">
                         Drink Dream
                         <p className="text-sm">Seu sonho em uma bebida</p>
                     </h1>
@@ -36,10 +36,10 @@ export default function Header() {
                 <nav>
                     <ul className="flex items-center gap-8">
                         <li>
-                            <a href="#" className="text-lg font-medium text-gray-600 hover:text-gray-900">Home</a>
+                            <Button color="warning" variant="shadow" className="font-semibold text-white">Home</Button>
                         </li>
                         <li>
-                            <a href="#" className="text-lg font-medium text-gray-600 hover:text-gray-900">Blog</a>
+                            <Button color="warning" variant="shadow" className="font-semibold text-white">Blog</Button>
                         </li>
                         <li>
                             <Button color="warning" variant="shadow" className="font-semibold text-white" onPress={onOpen}>Sign-In</Button>
@@ -47,7 +47,7 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+            <Modal isOpen={isOpen} placement="center" onOpenChange={onOpenChange}>
                 <ModalContent>
                     {(onClose) => (
                         <>
